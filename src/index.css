@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #FFDAB9;
+  }
+  body {
+    background-color: #FFDAB9 !important;
+    color: #111827;
+    font-family: 'Inter', sans-serif;
+  }
+  ::selection {
+    background-color: #FFB085;
+    color: #0A2F1D;
+  }
+
+  /* Custom scrollbar for premium feel */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FFDAB9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1E5631;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0A2F1D;
+  }
+}
+
+/* Base utility for hiding default cursor */
+.hide-cursor {
+  cursor: none;
+}
+.hide-cursor * {
+  cursor: none !important;
+}
