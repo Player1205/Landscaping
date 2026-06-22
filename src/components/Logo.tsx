@@ -22,10 +22,10 @@ const Logo = ({ className = "" }: { className?: string }) => {
         </svg>
       </div>
       <div className="flex flex-col justify-center">
-        <span className="text-2xl font-serif font-extrabold tracking-[0.1em] text-primary uppercase leading-none">
+        <span className="text-2xl font-serif font-extrabold tracking-[0.1em] uppercase leading-none">
           Econest
         </span>
-        <span className="text-[0.55rem] font-sans tracking-[0.2em] text-primary/80 uppercase mt-1 leading-none">
+        <span className="text-[0.55rem] font-sans tracking-[0.2em] opacity-80 uppercase mt-1 leading-none">
           Cleaning & Lawn Craft
         </span>
       </div>
