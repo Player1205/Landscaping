@@ -16,7 +16,7 @@ const CustomCursor = () => {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 w-3 h-3 bg-green-600 rounded-full pointer-events-none z-[9999]"
+        className="hidden md:block fixed top-0 left-0 w-3 h-3 bg-green-600 rounded-full pointer-events-none z-[9999]"
         animate={{
           x: mousePosition.x - 6,
           y: mousePosition.y - 6,
@@ -28,7 +28,7 @@ const CustomCursor = () => {
         }}
       />
       <motion.div
-        className="fixed top-0 left-0 w-10 h-10 border-2 border-green-500 rounded-full pointer-events-none z-[9998]"
+        className="hidden md:block fixed top-0 left-0 w-10 h-10 border-2 border-green-500 rounded-full pointer-events-none z-[9998]"
         animate={{
           x: mousePosition.x - 20,
           y: mousePosition.y - 20,

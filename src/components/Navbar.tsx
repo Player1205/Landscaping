@@ -30,12 +30,12 @@ const Navbar: React.FC = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-light/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'
+        scrolled ? 'bg-light/90 backdrop-blur-md shadow-sm py-2 md:py-3' : 'bg-transparent py-4 md:py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <Link to="/" onClick={() => setIsOpen(false)}>
+          <Link to="/" onClick={() => setIsOpen(false)} className="transform scale-90 sm:scale-100 origin-left transition-transform">
             <Logo className="text-primary" />
           </Link>
           
@@ -56,7 +56,8 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-primary hover:text-secondary focus:outline-none"
+              className="text-primary hover:text-secondary focus:outline-none p-2 -mr-2"
+              aria-label="Toggle menu"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -77,7 +78,7 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
                   location.pathname === link.path
                     ? 'text-primary bg-accent/30'
                     : 'text-primary/70 hover:text-primary hover:bg-accent/20'

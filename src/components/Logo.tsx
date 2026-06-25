@@ -2,12 +2,12 @@ import React from 'react';
 
 const Logo = ({ className = "" }: { className?: string }) => {
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
+    <div className={`flex items-center gap-2 sm:gap-2.5 md:gap-3 ${className}`}>
       <div className="text-[#D4AF37] flex-shrink-0">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          className="w-10 h-10"
+          className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10"
         >
           {/* Outer circle starting from leaf base */}
           <path d="M 6.8 18.5 A 10 10 0 0 0 12 22 A 10 10 0 0 0 12 2" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
@@ -22,10 +22,10 @@ const Logo = ({ className = "" }: { className?: string }) => {
         </svg>
       </div>
       <div className="flex flex-col justify-center">
-        <span className="text-2xl font-serif font-extrabold tracking-[0.1em] uppercase leading-none">
+        <span className="text-lg sm:text-xl md:text-2xl font-serif font-extrabold tracking-[0.1em] uppercase leading-none">
           Econest
         </span>
-        <span className="text-[0.55rem] font-sans tracking-[0.2em] opacity-80 uppercase mt-1 leading-none">
+        <span className="text-[0.4rem] sm:text-[0.5rem] md:text-[0.55rem] font-sans tracking-[0.15em] sm:tracking-[0.18em] md:tracking-[0.2em] opacity-80 uppercase mt-1 leading-none">
           Cleaning & Lawn Craft
         </span>
       </div>

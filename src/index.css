@@ -8,11 +8,13 @@
   html {
     scroll-behavior: smooth;
     background-color: #FFDAB9;
+    overflow-x: hidden;
   }
   body {
     background-color: #FFDAB9 !important;
     color: #111827;
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
   }
   ::selection {
     background-color: #FFB085;
@@ -35,10 +37,12 @@
   }
 }
 
-/* Base utility for hiding default cursor */
-.hide-cursor {
-  cursor: none;
-}
-.hide-cursor * {
-  cursor: none !important;
+/* Base utility for hiding default cursor only on desktop where custom cursor shows */
+@media (min-width: 768px) {
+  .hide-cursor {
+    cursor: none;
+  }
+  .hide-cursor * {
+    cursor: none !important;
+  }
 }

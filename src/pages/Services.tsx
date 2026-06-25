@@ -1,6 +1,7 @@
 import React from 'react';
 import AnimatedSection from '../components/AnimatedSection';
 import { Link } from 'react-router-dom';
+import { useQuoteModal } from '../context/QuoteModalContext';
 
 import lawnMowingImg from '../assets/service_lawn_mowing.png';
 import hedgeTrimmingImg from '../assets/hedge_trimming.png';
@@ -29,31 +30,32 @@ const cleaningServices = [
 ];
 
 const Services: React.FC = () => {
+  const { openQuoteModal } = useQuoteModal();
   return (
-    <div className="pt-24 pb-20 bg-light min-h-screen">
-      <section className="py-20 text-center px-4 max-w-4xl mx-auto">
+    <div className="pt-16 md:pt-24 pb-10 md:pb-20 bg-light min-h-screen">
+      <section className="py-8 md:py-20 text-center px-4 sm:px-6 max-w-4xl mx-auto">
         <AnimatedSection>
-          <h1 className="text-5xl md:text-6xl font-extrabold text-primary mb-6">Our Services</h1>
-          <p className="text-xl text-primary/70 max-w-2xl mx-auto font-light">
+          <h1 className="text-2xl sm:text-4xl md:text-6xl font-extrabold text-primary mb-3 sm:mb-4 md:mb-6">Our Services</h1>
+          <p className="text-sm sm:text-base md:text-xl text-primary/70 max-w-2xl mx-auto font-light">
             Comprehensive solutions for both your outdoor landscapes and indoor spaces.
           </p>
         </AnimatedSection>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 pb-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 md:pb-16">
         <AnimatedSection>
-          <h2 className="text-4xl font-extrabold text-dark mb-10 text-center">Lawn & Yard Services</h2>
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-dark mb-5 md:mb-10 text-center">Lawn & Yard Services</h2>
         </AnimatedSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-8">
           {lawnServices.map((service, index) => (
             <AnimatedSection key={index} delay={index * 0.1}>
-              <div className="group relative bg-accent/30 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-accent/50 flex flex-col h-full">
-                <div className="h-64 overflow-hidden relative">
+              <div className="group relative bg-accent/30 rounded-2xl md:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-accent/50 flex flex-col h-full mx-2 sm:mx-0">
+                <div className="h-36 sm:h-44 md:h-64 overflow-hidden relative">
                   <img src={service.img} alt={service.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
                 </div>
-                <div className="p-8 relative bg-accent/30 flex-grow rounded-t-3xl -mt-4 z-20 flex flex-col">
-                  <h4 className="text-2xl font-bold text-primary mb-3">{service.title}</h4>
-                  <p className="text-primary/70 flex-grow">{service.desc}</p>
+                <div className="p-4 sm:p-5 md:p-8 relative bg-accent/30 flex-grow rounded-t-[2rem] -mt-4 z-20 flex flex-col">
+                  <h4 className="text-base sm:text-lg md:text-2xl font-bold text-primary mb-2 md:mb-3">{service.title}</h4>
+                  <p className="text-sm md:text-base text-primary/70 flex-grow">{service.desc}</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -61,32 +63,30 @@ const Services: React.FC = () => {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 pb-24">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 md:pb-24">
         <AnimatedSection>
-          <h2 className="text-4xl font-extrabold text-dark mb-10 text-center">Cleaning Services</h2>
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-dark mb-5 md:mb-10 text-center">Cleaning Services</h2>
         </AnimatedSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-8">
           {cleaningServices.map((service, index) => (
             <AnimatedSection key={index} delay={index * 0.1}>
-              <div className="group relative bg-accent/30 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-accent/50 flex flex-col h-full">
-                <div className="h-64 overflow-hidden relative">
+              <div className="group relative bg-accent/30 rounded-2xl md:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-accent/50 flex flex-col h-full mx-2 sm:mx-0">
+                <div className="h-36 sm:h-44 md:h-64 overflow-hidden relative">
                   <img src={service.img} alt={service.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
                 </div>
-                <div className="p-8 relative bg-accent/30 flex-grow rounded-t-3xl -mt-4 z-20 flex flex-col">
-                  <h4 className="text-2xl font-bold text-primary mb-3">{service.title}</h4>
-                  <p className="text-primary/70 flex-grow">{service.desc}</p>
+                <div className="p-4 sm:p-5 md:p-8 relative bg-accent/30 flex-grow rounded-t-[2rem] -mt-4 z-20 flex flex-col">
+                  <h4 className="text-base sm:text-lg md:text-2xl font-bold text-primary mb-2 md:mb-3">{service.title}</h4>
+                  <p className="text-sm md:text-base text-primary/70 flex-grow">{service.desc}</p>
                 </div>
               </div>
             </AnimatedSection>
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <Link to="/contact">
-            <button className="bg-primary text-light font-bold px-10 py-4 rounded-full shadow-lg hover:bg-secondary transition-colors duration-300">
-              Request a Quote
-            </button>
-          </Link>
+        <div className="mt-8 md:mt-16 text-center">
+          <button onClick={openQuoteModal} className="bg-primary text-light font-bold px-6 py-3 md:px-10 md:py-4 rounded-full shadow-lg hover:bg-secondary transition-colors duration-300">
+            Request a Quote
+          </button>
         </div>
       </section>
     </div>
