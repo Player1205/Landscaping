@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-sm sm:text-base md:text-xl mb-1">Email</h3>
-                    <p className="text-light/70 break-all text-sm md:text-base">info@econestcleaning.com</p>
+                    <a href="mailto:econestcleaninglawncraft@gmail.com?subject=Free%20Quote%20Request&body=Hi!%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20my%20property." className="text-light/70 hover:text-accent transition-colors break-all text-sm md:text-base inline-block">econestcleaninglawncraft@gmail.com</a>
                   </div>
                 </div>
 

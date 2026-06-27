@@ -43,7 +43,8 @@ const Footer: React.FC = () => {
                 <span className="font-semibold sm:mr-2 mb-1 sm:mb-0">Phone:</span> +1 (403) 354-4856
               </li>
               <li className="flex flex-col sm:flex-row items-center sm:items-start">
-                <span className="font-semibold sm:mr-2 mb-1 sm:mb-0">Email:</span> info@econestcleaning.com
+                <span className="font-semibold sm:mr-2 mb-1 sm:mb-0">Email:</span> 
+                <a href="mailto:econestcleaninglawncraft@gmail.com?subject=Free%20Quote%20Request&body=Hi!%20I%20would%20like%20to%20request%20a%20free%20quote%20for%20my%20property." className="hover:text-accent transition-colors">econestcleaninglawncraft@gmail.com</a>
               </li>
               <li className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left">
                 <span className="font-semibold sm:mr-2 mb-1 sm:mb-0">Address:</span> Cityscape Drive, NE, Calgary, AB

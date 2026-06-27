@@ -19,7 +19,7 @@ const QuoteModal: React.FC = () => {
     handleClose();
   };
 
-  const email = 'info@econestcleaning.com';
+  const email = 'econestcleaninglawncraft@gmail.com';
   const subject = 'Free Quote Request';
   const body = 'Hi! I would like to request a free quote for my property.';
 
