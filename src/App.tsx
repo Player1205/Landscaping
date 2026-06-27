@@ -9,11 +9,13 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import { QuoteModalProvider } from './context/QuoteModalContext';
 import QuoteModal from './components/QuoteModal';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <QuoteModalProvider>
       <Router>
+        <ScrollToTop />
         <div className="flex flex-col min-h-screen hide-cursor overflow-x-hidden relative w-full">
         <CustomCursor />
         <Navbar />
