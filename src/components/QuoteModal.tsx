@@ -75,7 +75,15 @@ const QuoteModal: React.FC = () => {
 
                   {/* Email Option Selection Trigger */}
                   <div
-                    onClick={() => setShowEmailOptions(true)}
+                    onClick={() => {
+                      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                      if (isMobile) {
+                        window.location.href = defaultUrl;
+                        setTimeout(handleClose, 100);
+                      } else {
+                        setShowEmailOptions(true);
+                      }
+                    }}
                     className="bg-primary rounded-xl p-5 cursor-pointer transition-transform duration-200 hover:scale-[1.02] active:scale-95 shadow-md flex flex-col items-center text-center group"
                   >
                     <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:bg-white/20 transition-colors">
