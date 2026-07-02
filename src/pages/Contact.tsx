@@ -1,8 +1,10 @@
 import React from 'react';
 import AnimatedSection from '../components/AnimatedSection';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { useQuoteModal } from '../context/QuoteModalContext';
 
 const Contact: React.FC = () => {
+  const { openQuoteModal } = useQuoteModal();
 
   return (
     <div className="pt-16 md:pt-24 min-h-screen bg-light">
@@ -72,6 +74,16 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
               </div>
+              
+              <div className="mt-10 sm:mt-12 text-center w-full flex justify-center">
+                <button 
+                  onClick={openQuoteModal}
+                  className="bg-accent text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-accent/90 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-accent/20"
+                >
+                  Get a Free Quote
+                </button>
+              </div>
+
             </div>
           </AnimatedSection>
         </div>
