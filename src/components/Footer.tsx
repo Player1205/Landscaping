@@ -29,10 +29,10 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-center sm:items-start">
             <h3 className="text-sm sm:text-base md:text-lg font-semibold mb-2 sm:mb-3 md:mb-4 text-accent">Services</h3>
             <ul className="space-y-1.5 sm:space-y-2">
-              <li className="text-sm text-light/60 hover:text-accent transition-colors cursor-pointer">Landscape Design</li>
-              <li className="text-sm text-light/60 hover:text-accent transition-colors cursor-pointer">Lawn Mowing</li>
-              <li className="text-sm text-light/60 hover:text-accent transition-colors cursor-pointer">Plant Installation</li>
-              <li className="text-sm text-light/60 hover:text-accent transition-colors cursor-pointer">Irrigation</li>
+              <li className="text-sm"><Link to="/services" className="text-light/60 hover:text-accent transition-colors">Lawn Mowing & Edging</Link></li>
+              <li className="text-sm"><Link to="/services" className="text-light/60 hover:text-accent transition-colors">Yard & Snow Cleanup</Link></li>
+              <li className="text-sm"><Link to="/services" className="text-light/60 hover:text-accent transition-colors">Residential Cleaning</Link></li>
+              <li className="text-sm"><Link to="/services" className="text-light/60 hover:text-accent transition-colors">Commercial Cleaning</Link></li>
             </ul>
           </div>
 
